@@ -1,3 +1,5 @@
 fn main() {
-    println!("Hello, world!");
+    for n in 0..10 {
+        println!("{n}: Hello, Rust!");
+    }
 }
