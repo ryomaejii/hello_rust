@@ -1,8 +1,8 @@
-pub mod list;
+pub mod item;
 
 use axum::Router;
-use list::list_routes;
+use item::item_routes;
 
 pub fn all_routes() -> Router {
-    list_routes()
+    item_routes()
 }

@@ -8,7 +8,7 @@ pub struct Item {
 }
 
 #[derive(Serialize, Deserialize)]
-pub struct ListResponse {
+pub struct ItemList {
     pub title: String,
-    pub item: Vec<Item>,
+    pub items: Vec<Item>,
 }

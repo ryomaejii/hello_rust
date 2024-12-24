@@ -1,14 +1,14 @@
-use crate::models::list::{Item, ListResponse};
+use crate::models::item::{Item, ItemList};
 use axum::{
     extract::{Json, Path},
     response::IntoResponse,
 };
 
-pub async fn get_list(Path(list_id): Path<String>) -> impl IntoResponse {
+pub async fn get_item_list(Path(item_id): Path<String>) -> impl IntoResponse {
     // ダミーデータを作成
-    let response = ListResponse {
-        title: format!("List {}", list_id),
-        item: vec![
+    let response = ItemList {
+        title: format!("List {}", item_id),
+        items: vec![
             Item {
                 id: "item1".to_string(),
                 name: "Sample Item 1".to_string(),
